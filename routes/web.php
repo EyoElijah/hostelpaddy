@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\MailingList;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 
 // Second Route method – Root URL with ID will match this method
-Route::get('ID/{id}',function($id){
+Route::get('/ID/{id}',function($id){
     echo 'ID: '.$id;
     });
 
@@ -27,3 +27,6 @@ Route::get('ID/{id}',function($id){
     Route::get('/user/{name?}',function($name = 'Virat Gandhi'){
         echo "Name: ".$name;
         });
+    
+        Route::get('/form', [MailingList::class,'form'])->name('mail.form');
+        Route::post('/mail', [MailingList::class,'submit'])->name('email.submit');
