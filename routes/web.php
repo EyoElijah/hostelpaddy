@@ -17,13 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-// Second Route method – Root URL with ID will match this method
-Route::get('ID/{id}',function($id){
-    echo 'ID: '.$id;
-    });
-
-    // Third Route method – Root URL with or without name will match this method
-    Route::get('/user/{name?}',function($name = 'Virat Gandhi'){
-        echo "Name: ".$name;
-        });
+require __DIR__.'/auth.php';
