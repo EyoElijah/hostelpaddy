@@ -7,7 +7,7 @@
     <title>Email</title>
 </head>
 <body>
-    <form action="http://localhost:8000/api/mail" method="post">
+    <form action="/api/mail" method="post">
         <input type="email" name="email" >
         <input type="submit" value="Add Email">
     </form>
