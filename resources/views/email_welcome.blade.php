@@ -7,6 +7,6 @@
     <title>Email</title>
 </head>
 <body>
-    <h1>You will get a feedback</h1>
+    <h1>Email was submitted successfully</h1>
 </body>
 </html>
