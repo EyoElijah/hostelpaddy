@@ -7,7 +7,8 @@
     <title>Email</title>
 </head>
 <body>
-    <form action="/api/mail" method="post">
+    <form action="/mail" method="post">
+        @csrf
         <input type="email" name="email" >
         <input type="submit" value="Add Email">
     </form>
