@@ -22,9 +22,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-require __DIR__.'/api.php';
-Route::get('/test/{id?}',function(Request $request, $id="no id"){return 'User '.$id; })->name('testy');
-Route::get('/token', function(Request $request){
-    $token=$request->session()->token();
-    $token=csrf_token();
-});
+
+Route::get('/mail', [MailingList::class, 'form']);
+Route::post('/mail', [MailingList::class, 'submit']);
