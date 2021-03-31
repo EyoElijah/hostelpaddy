@@ -22,4 +22,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-require __DIR__.'/api.php';
+
+Route::get('/mail', [MailingList::class, 'form']);
+Route::post('/mail', [MailingList::class, 'submit']);
