@@ -7,29 +7,29 @@
 
 
 /* Custom Fonts */
-@import url(../fonts/TTCommons-Black.ttf);
-@import url(../fonts/TTCommons-BlackItalic.ttf);
-@import url(../fonts/TTCommons-Bold.ttf);
-@import url(../fonts/TTCommons-BoldItalic.ttf);
-@import url(../fonts/TTCommons-DemiBold.ttf);
-@import url(../fonts/TTCommons-DemiBoldItalic.ttf);
-@import url(../fonts/TTCommons-ExtraBold.ttf);
-@import url(../fonts/TTCommons-Medium.ttf);
-@import url(../fonts/TTCommons-Regular.ttf);
+@import url(fonts/TTCommons-Black.ttf);
+@import url(fonts/TTCommons-BlackItalic.ttf);
+@import url(fonts/TTCommons-Bold.ttf);
+@import url(fonts/TTCommons-BoldItalic.ttf);
+@import url(fonts/TTCommons-DemiBold.ttf);
+@import url(fonts/TTCommons-DemiBoldItalic.ttf);
+@import url(fonts/TTCommons-ExtraBold.ttf);
+@import url(fonts/TTCommons-Medium.ttf);
+@import url(fonts/TTCommons-Regular.ttf);
 
 @font-face {
   font-family: 'TTCommons-Black';
-  src: url(../fonts/TTCommons-Black.ttf)
+  src: url(fonts/TTCommons-Black.ttf)
 }
 
 @font-face {
   font-family: 'TTCommons-BlackItalic';
-  src: url(../fonts/TTCommons-BlackItalic.ttf)
+  src: url(fonts/TTCommons-BlackItalic.ttf)
 }
 
 @font-face {
   font-family: 'TTCommons-Bold';
-  src: url(../fonts/TTCommons-Bold.ttf)
+  src: url(fonts/TTCommons-Bold.ttf)
 }
 
 @font-face {
@@ -44,28 +44,28 @@
 
 @font-face {
   font-family: 'TTCommons-DemiBoldItalic';
-  src: url(../fonts/TTCommons-DemiBoldItalic.ttf)
+  src: url(fonts/TTCommons-DemiBoldItalic.ttf)
 }
 
 @font-face {
   font-family: 'TTCommons-ExtraBold';
-  src: url(../fonts/TTCommons-ExtraBold.ttf)
+  src: url(fonts/TTCommons-ExtraBold.ttf)
 }
 
 @font-face {
   font-family: 'TTCommons-Medium';
-  src: url(../fonts/TTCommons-Medium.ttf)
+  src: url(fonts/TTCommons-Medium.ttf)
 }
 
 @font-face {
   font-family: 'TTCommons-Regular';
-  src: url(../fonts/TTCommons-Regular.ttf)
+  src: url(fonts/TTCommons-Regular.ttf)
 }
 
 body {
   min-height: 100vh;
   color: #fff !important;
-  background-image: url(../assets/bg.svg);
+  background-image: url(assets/bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #212224 !important;
