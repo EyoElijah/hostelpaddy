@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email</title>
-</head>
-<body>
-    <form action="http://localhost:8000/api/mail" method="post">
-        <input type="email" name="email" >
-        <input type="submit" value="Add Email">
-    </form>
-</body>
-</html>
+<div class="input-field-area">
+  <form action="/mail" method="post" class="form-control">
+    @csrf
+    <input class="input" type="email" name="email" placeholder="Enter your email address here">
+    <button class="submit">
+      <img class="bell" src="{{ asset('files/assets/Bell.svg') }}" alt="bell icon"> notify me
+    </button>
+  </form>
+</div>
