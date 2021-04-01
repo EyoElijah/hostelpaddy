@@ -1,100 +1,120 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.home')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+@section('content')
+  <!-- Countdown container -->
+  <div class="countdown-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-sm-6 col-lg-3">
+          <div class="count-down">
+            <h4 class="heading-text" id="countDay"></h4>
+            <span class="desc-text">DAYS</span>
+          </div>
         </div>
-    </body>
-</html>
+
+        <div class="col-6 col-sm-6 col-lg-3">
+          <div class="count-down">
+            <h4 class="heading-text" id="countHrs"></h4>
+            <span class="desc-text">HOURS</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-3">
+          <div class="count-down">
+            <h4 class="heading-text" id="countMin"></h4>
+            <span class="desc-text">MINUTES</span>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-3">
+          <div class="count-down">
+            <h4 class="heading-text" id="countSec"></h4>
+            <span class="desc-text">SECONDS</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- /Countdown container -->
+
+  <!-- Coming soon content -->
+  <div class="coming-soon-content">
+    <div class="container">
+      <div class="row">
+
+        <!-- Coming soon content text -->
+        <div class="col-12 col-md-8 col-lg-8">
+          <div class="website">
+            WEBSITE
+          </div>
+          <div class="launching-soon">
+            LAUNCHING SOON
+          </div>
+
+          <div class="newsletter-container">
+            <div class="newsletter-description">
+              Get an apartment early by signing up to our mailing list
+            </div>
+            <div class="input-field-area">
+              <form action="https://data.hostelpaddy.com/data/email.php" method="post" class="form-control">
+                <input class="input" type="email" name="email" placeholder="Enter your email address here">
+                <button class="submit">
+                  <img class="bell" src="assets/Bell.svg" alt="bell icon"> notify me
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- /Coming soon content text -->
+
+        <!-- Coming soon content image -->
+        <div class="col-12 col-md-4 col-lg-4 coming-soon-image">
+          <img src="assets/side-image.svg" alt="lodges">
+        </div>
+        <!-- /Coming soon content image -->
+
+      </div>
+    </div>
+  </div>
+  <!-- /Coming soon content -->
+
+  <!-- Social icons -->
+  <div class="container">
+    <div class="row">
+      <div class="social-icons">
+        <div class="social-icon">
+          <a href="https://facebook.com/Hostel-Paddy-111950534317618/?_rdc=1&_rdr">
+            <img src="assets/Facebook.svg" alt="Facebook">
+          </a>
+        </div>
+
+        <div class="social-icon">
+          <a href="https://twitter.com/hostelpaddy">
+            <img src="assets/Twitter.svg" alt="Twitter">
+          </a>
+        </div>
+
+        <div class="social-icon">
+          <a href="https://instagram.com/hostelpaddy">
+            <img src="assets/Instagram.svg" alt="Instagram">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- /Social icons -->
+
+
+  <!-- Copyright area -->
+  <div class="container">
+    <div class="row text-center">
+      <div class="copyright-area">
+        &copy; CHERNOBYL, <span id="copyright"></span>
+      </div>
+    </div>
+  </div>
+  <!-- /Copyright area -->
+@endsection
