@@ -7,7 +7,7 @@
           <img src="img/logo.png" alt="Logo" class="logo img-fluid">
         </div>
         <div class="blog-text">
-          <a href="https://blog.hostelpaddy.com" class="blog">Blog</a>
+          <a href="https://blog.hostelpaddy.com" target="_blank" class="blog">Blog</a>
         </div>
       </div>
     </div>
