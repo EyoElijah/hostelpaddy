@@ -23,5 +23,9 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+// search route
+Route::get('/search',[App\Http\Controllers\SearchController::class, 'search']);
+
+//This route is used to collect emails
 Route::get('/mail', [MailingList::class, 'form']);
 Route::post('/mail', [MailingList::class, 'submit']);
