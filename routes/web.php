@@ -30,3 +30,6 @@ Route::get('/ID/{id}',function($id){
     
         Route::get('/form', [MailingList::class,'form'])->name('mail.form');
         Route::post('/mail', [MailingList::class,'submit'])->name('email.submit');
+
+// search route
+Route::get('/search',[App\Http\Controllers\SearchController::class, 'search']);
