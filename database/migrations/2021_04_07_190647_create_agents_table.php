@@ -19,7 +19,7 @@ class CreateAgentsTable extends Migration
             $table->string('email')->nullable();
             $table->string('phone');
             $table->string('password');
-            $table->binary('file');
+            $table->string('image');
             $table->timestamps();
         });
     }
