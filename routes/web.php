@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\MailingList;
+use App\Http\Controllers\StudentController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +25,23 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+require __DIR__.'/studentauth.php';
+
 // search route
 Route::get('/search',[App\Http\Controllers\SearchController::class, 'search']);
 
 //This route is used to collect emails
 Route::get('/mail', [MailingList::class, 'form']);
 Route::post('/mail', [MailingList::class, 'submit']);
+
+// Students Route
+// Route::post('/students', [StudentsController::class, 'index']);
+// Route::get('/student', function () {
+//     return view('students.index');
+// })->middleware(['auth'])->name('students.index');
+
+// Route::resource('students', [StudentsController::class]);
+
+Route::get('/student', [StudentController::class, 'index'])
+    // ->middleware('auth:student')
+    ->name('student.index');
