@@ -1,6 +1,6 @@
 <?php
 use App\Http\Controllers\MailingList;
-use App\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentsController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +42,6 @@ Route::post('/mail', [MailingList::class, 'submit']);
 
 // Route::resource('students', [StudentsController::class]);
 
-Route::get('/student', [StudentController::class, 'index'])
+Route::get('/student', [StudentsController::class, 'index'])
     // ->middleware('auth:student')
     ->name('student.index');
