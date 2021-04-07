@@ -7,6 +7,6 @@
     <title>Email</title>
 </head>
 <body>
-    <h1>Email was submitted successfully</h1>
+    <h1>{{$email}} was submitted successfully</h1>
 </body>
 </html>
