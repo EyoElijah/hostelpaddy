@@ -26,7 +26,7 @@
                 </div>
             @endif --}}
 
-        <form method="POST" action="{{ route('student.login') }}">
+        <form method="POST" action="{{ route('login.store') }}">
             @csrf
 
             <!-- Email Address -->
