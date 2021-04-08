@@ -28,7 +28,7 @@ require __DIR__.'/auth.php';
 require __DIR__.'/studentauth.php';
 
 // search route
-Route::get('/search',[App\Http\Controllers\SearchController::class, 'search']);
+Route::get('/search',[App\Http\Controllers\SearchController::class, 'search'])->name('search');
 
 //This route is used to collect emails
 Route::get('/mail', [MailingList::class, 'form']);
