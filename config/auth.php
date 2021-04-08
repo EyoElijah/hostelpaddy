@@ -74,10 +74,13 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+<<<<<<< HEAD
+=======
         ],
         'students' => [
             'driver' => 'eloquent',
             'model' => App\Models\Student::class,
+>>>>>>> 8475bbc11c2d08eda82f29e8047594b44a98e565
         ],
 
         // 'users' => [
