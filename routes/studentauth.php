@@ -22,7 +22,8 @@ Route::get('/student/login', [AuthenticatedSessionController::class, 'create'])
     ->name('student.login');
 
 Route::post('/student/login', [AuthenticatedSessionController::class, 'store'])
-    ->middleware('guest');
+    ->middleware('guest')
+    ->name('login.store');
 
 Route::get('/student/forgot-password', [PasswordResetLinkController::class, 'create'])
     ->middleware('guest')

@@ -51,6 +51,6 @@ class RegisteredUserController extends Controller
         event(new Registered($student));
 
         // return redirect(RouteServiceProvider::HOME);
-        return redirect()->intended('/students');
+        return redirect()->intended('/student');
     }
 }
