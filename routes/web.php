@@ -35,13 +35,6 @@ Route::get('/mail', [MailingList::class, 'form']);
 Route::post('/mail', [MailingList::class, 'submit']);
 
 // Students Route
-// Route::post('/students', [StudentsController::class, 'index']);
-// Route::get('/student', function () {
-//     return view('students.index');
-// })->middleware(['auth'])->name('students.index');
-
-// Route::resource('students', [StudentsController::class]);
-
-Route::get('/student', [StudentsController::class, 'index'])
-    // ->middleware('auth:student')
-    ->name('student.index');
+Route::get('/student', function () {
+    return view('students.index');
+})->middleware(['student'])->name('students.index');
