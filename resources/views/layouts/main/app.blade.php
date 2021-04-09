@@ -25,7 +25,7 @@
   <meta name="keywords" content=" ">
   <meta http-equiv="Content-Type" content="text/html">
   <meta name="theme-color" content="#0f4392">
-  <link rel="manifest" href="../manifest.json">
+  <link rel="manifest" href="{{ asset('main/manifest.json') }}">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="mobile-web-app-capable" content="yes">
@@ -80,9 +80,12 @@
 
 
 <body>
+  @include('layouts.main.navigation')
+
   @yield('content')
 
 
+  @include('layouts.main.footer')
 
   <!-- Vendor scripts -->
   <script src="{{ asset('main/vendor/jquery/jquery-3.1.1.min.js') }}"></script>

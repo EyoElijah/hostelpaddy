@@ -21,19 +21,19 @@
       </div>
       <div class="col-md-4">
         <h5>Products</h5>
-        <p><a href="about.html">About Us</a></p>
-        <p><a href="/auth-pages/onboarding.html">Sign up</a></p>
-        <p><a href="/auth-pages/onboarding.html">Login</a></p>
-        <p><a href="https://blog.hostelpaddy.com">Blog</a></p>
-        <p><a href="hostels.html">Listed hostels</a></p>
+        <p><a href="{{ route('about') }}">About Us</a></p>
+        <p><a href="{{ route('onboarding') }}">Sign up</a></p>
+        <p><a href="{{ route('onboarding') }}">Login</a></p>
+        <p><a href="https://blog.hostelpaddy.com" target="_blank">Blog</a></p>
+        <p><a href="{{ route('hostels') }}">Listed hostels</a></p>
         <p><a href="#">House owners/agents</a></p>
       </div>
       <div class="col-md-4">
         <h5>Support</h5>
-        <p><a href="contact.html">Contact Us</a></p>
-        <p><a href="faqs.html">FAQs</a></p>
-        <p><a href="tos.html">Terms of services</a></p>
-        <p><a href="privacy.html">Privacy policy</a></p>
+        <p><a href="{{ route('contact') }}">Contact Us</a></p>
+        <p><a href="{{ route('faqs') }}">FAQs</a></p>
+        <p><a href="{{ route('tos') }}">Terms of services</a></p>
+        <p><a href="{{ route('privacy') }}">Privacy policy</a></p>
         <!-- </div> -->
       </div>
     </div>

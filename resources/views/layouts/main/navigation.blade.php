@@ -16,22 +16,22 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav justify-content-center">
           <li class="nav-item active">
-            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link" href="{{ route('about') }}">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="hostels.html">Listed hostels</a>
+            <a class="nav-link" href="{{ route('hostels') }}">Listed hostels</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Home owners/agents</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="help.html">Help</a>
+            <a class="nav-link" href="{{ route('help') }}">Help</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://blog.hostelpaddy.com">Blogs</a>
+            <a class="nav-link" target="_blank" href="https://blog.hostelpaddy.com">Blogs</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-primary signup" href="/auth-pages/onboarding.html">Sign Up</a>
+            <a class="btn btn-primary signup" href="{{ route('onboarding') }}">Sign Up</a>
           </li>
         </ul>
       </div>

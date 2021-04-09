@@ -1,9 +1,7 @@
 @extends('layouts.main.app')
+@section('title', 'HostelPaddy - Home')
 
 @section('content')
-
-    @include('layouts.main.navigation')
-
     <!--Introduction Section-->
     <div class="container-fluid padding">
       <div class="row intro padding">
@@ -13,7 +11,7 @@
             An innovating way to relieve you of the hassle of hostel-hunting.
           </p>
           <br /><br />
-          <a href="/auth-pages/onboarding.html" class="btn btn-primary btn-lg">Get Started</a>
+          <a href="{{ route('onboarding') }}" class="btn btn-primary btn-lg">Get Started</a>
         </div>
         <div class="col-lg-6">
           <img src="{{ asset('main/home-img/screenshot.png') }}" class="img-fluid intro-img" alt="" />
@@ -34,7 +32,7 @@
             owners/agents to solve their hostel accommodation problems
           </p>
           <br />
-          <a href="/auth-pages/onboarding.html" class="btn btn-primary btn-lg">Get Started</a>
+          <a href="{{ route('onboarding') }}" class="btn btn-primary btn-lg">Get Started</a>
         </div>
       </div>
     </div>
@@ -141,7 +139,4 @@
         </div>
       </div>
     </div>
-
-    @include('layouts.main.footer')
-
 @endsection
