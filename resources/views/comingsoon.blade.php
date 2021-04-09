@@ -1,4 +1,5 @@
 @extends('layouts.comingsoon.app')
+@section('title', 'Coming Soon')
 
 @section('content')
 
