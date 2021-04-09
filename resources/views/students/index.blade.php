@@ -7,18 +7,15 @@
 
         <h1>Hello User</h1>
 
-
         <form method="POST" action="{{ route('student.logout') }}">
             @csrf
             {{-- <a href="{{ route('student.logout') }}">Log Out</a> --}}
 
-            <a href="{{ route('student.logout') }}" onclick="event.preventDefault();this.closest('form').submit();">{{ __('Logout') }}</a>
-            
-            <x-responsive-nav-link :href="route('student.logout')"
-                    onclick="event.preventDefault();
-                                this.closest('form').submit();">
-                {{ __('Log out') }}
-            </x-responsive-nav-link>
+            <a href="{{ route('student.logout') }}"
+                onclick="event.preventDefault();
+                this.closest('form').submit();">
+                {{ ('Logout') }}
+            </a>
         </form>
     </body>
 </html>
