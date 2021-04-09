@@ -28,7 +28,7 @@
             </div>
           </a>
           <div class="login-button">
-            <a href="#" class="login-button-text">Login</a>
+            <a href="{{ route('student.login') }}" class="login-button-text">Login</a>
           </div>
         </div>
         <!-- /nav-container -->
@@ -40,7 +40,7 @@
           </div>
 
           <!-- Student onboard -->
-          <a href="#" class="onboard-student">
+          <a href="{{ route('student.register') }}" class="onboard-student">
             <div class="onboard onboard-student">
               <div class="icon">
                 <!-- <i class="lnr lnr-graduation-hat"></i> -->

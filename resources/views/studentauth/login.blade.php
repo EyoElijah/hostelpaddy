@@ -1,3 +1,4 @@
+@section('title', 'Hostel Paddy - Login')
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
