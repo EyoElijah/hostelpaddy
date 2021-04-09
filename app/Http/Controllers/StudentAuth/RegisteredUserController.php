@@ -12,11 +12,6 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisteredUserController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('guest');
-    //     $this->middleware('guest:student');
-    // }
     /**
      * Display the registration view.
      *
