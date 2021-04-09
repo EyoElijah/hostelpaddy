@@ -37,4 +37,4 @@ Route::post('/mail', [MailingList::class, 'submit']);
 // Students Route
 Route::get('/student', function () {
     return view('students.index');
-})->middleware(['student'])->name('students.index');
+})->middleware(['student'])->name('student.index');
