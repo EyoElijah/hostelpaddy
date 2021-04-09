@@ -68,12 +68,11 @@ class AuthenticatedSessionController extends Controller
 // }
 
 {
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-        $this->middleware('guest:student')->except('logout');
-        // $this->middleware('guest:agent')->except('logout');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('guest')->except('logout');
+    //     $this->middleware('student')->except('logout');
+    // }
 
     public function create()
     {

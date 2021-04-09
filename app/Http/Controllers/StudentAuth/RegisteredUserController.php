@@ -12,12 +12,11 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisteredUserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('guest');
-        $this->middleware('guest:student');
-        // $this->middleware('guest:agent');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('guest');
+    //     $this->middleware('guest:student');
+    // }
     /**
      * Display the registration view.
      *
@@ -46,7 +45,7 @@ class RegisteredUserController extends Controller
             'password' => 'required|string|confirmed|min:8',
         ]);
 
-        Auth::login($student = Student::create([
+        Auth::guard('student')->login($student = Student::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
