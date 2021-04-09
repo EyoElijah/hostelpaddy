@@ -1,8 +1,9 @@
-@extends('layouts.home')
+@extends('layouts.comingsoon.app')
+@section('title', 'Coming Soon')
 
 @section('content')
 
-  @include('compo.countdown')
+  @include('components.comingsoon.countdown')
 
   <!-- Coming soon content -->
   <div class="coming-soon-content">
@@ -38,7 +39,7 @@
   </div>
   <!-- /Coming soon content -->
 
-  @include('compo.social')
+  @include('components.comingsoon.social')
 
-  @include('compo.copyright')
+  @include('components.comingsoon.copyright')
 @endsection
