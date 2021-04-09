@@ -19,8 +19,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/comingsoon', function () {
-    return view('comingsoon');
+Route::get('/coming-soon', function () {
+    return view('coming-soon');
 });
 
 Route::get('/dashboard', function () {
