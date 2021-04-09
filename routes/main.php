@@ -25,7 +25,7 @@ Route::get('/help', function () {
 })->name('help');
 
 Route::get('/onboarding', function () {
-    return view('auth-pages.onboarding');
+    return view('onboarding');
 })->name('onboarding');
 
 Route::get('/contact', function () {
