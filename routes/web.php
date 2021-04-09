@@ -24,7 +24,7 @@ Route::get('/coming-soon', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/main.php';
