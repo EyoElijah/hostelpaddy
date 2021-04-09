@@ -23,7 +23,6 @@ Route::get('/student/login', [AuthenticatedSessionController::class, 'create'])
 
 Route::post('/student/login', [AuthenticatedSessionController::class, 'store'])
     ->middleware('guest');
-    
 
 Route::get('/student/forgot-password', [PasswordResetLinkController::class, 'create'])
     ->middleware('guest')
@@ -61,5 +60,5 @@ Route::post('/student/confirm-password', [ConfirmablePasswordController::class, 
     ->middleware('auth');
 
 Route::post('/student/logout', [AuthenticatedSessionController::class, 'destroy'])
-    ->middleware('auth')
+    ->middleware('student')
     ->name('student.logout');
