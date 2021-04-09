@@ -9,8 +9,6 @@
 
         <form method="POST" action="{{ route('student.logout') }}">
             @csrf
-            {{-- <a href="{{ route('student.logout') }}">Log Out</a> --}}
-
             <a href="{{ route('student.logout') }}"
                 onclick="event.preventDefault();
                 this.closest('form').submit();">
