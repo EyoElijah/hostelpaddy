@@ -1,6 +1,6 @@
 <?php
 use App\Http\Controllers\MailingList;
-use App\Http\Controllers\StudentsController;
+use App\Http\Controllers\SearchController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -27,10 +27,10 @@ require __DIR__.'/auth.php';
 
 require __DIR__.'/studentauth.php';
 
-// search route
-Route::get('/search',[App\Http\Controllers\SearchController::class, 'search'])->name('search');
+// Search route
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
-//This route is used to collect emails
+// This route is used to collect emails
 Route::get('/mail', [MailingList::class, 'form']);
 Route::post('/mail', [MailingList::class, 'submit']);
 
