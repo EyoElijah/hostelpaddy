@@ -8,21 +8,23 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
+    <h1>Search your preferred hostel by Location</h1>
     <form method="get" action="{{ route('search')}}">
         @csrf
-        <input type="text" name="query" placeholder="search user">
+        <input type="text" name="query" placeholder="search location">
         <button type="submit">search</button>
     </form>
         
         @if($users->isNotEmpty())
             @foreach ($users as $user)
                 <div>
-                {{$user->name}}
+                    <h2>here are the hostels for this location</h2>
+                {{$user->location}}
                 </div>
             @endforeach
         @else
             <div>
-            <h2> No user found</h2>
+            <h2> No hostel found for this location</h2>
             </div>
         @endif
 </body>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class SearchController extends Controller
 {
@@ -14,8 +15,8 @@ class SearchController extends Controller
         $search = $request->input('query');
 
         //   search the names in the user's table
-        $users= User::query()
-            ->where('name', 'LIKE', "%{$search}%")
+        $users= Student::query()
+            ->where('location', 'LIKE', "%{$search}%")
             ->get();
         // return the search view
         return view('search', compact('users'));
