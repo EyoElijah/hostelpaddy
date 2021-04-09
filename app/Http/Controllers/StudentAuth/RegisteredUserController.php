@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisteredUserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest');
+        $this->middleware('guest:student');
+        // $this->middleware('guest:agent');
+    }
     /**
      * Display the registration view.
      *
@@ -50,7 +56,6 @@ class RegisteredUserController extends Controller
 
         event(new Registered($student));
 
-        // return redirect(RouteServiceProvider::HOME);
-        return redirect()->intended('/student');
+        return redirect(RouteServiceProvider::STUDENTHOME);
     }
 }
