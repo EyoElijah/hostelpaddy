@@ -1,121 +1,9 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+@extends('layouts.main.app')
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HostelPaddy - Home</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('content')
 
-    <title>HostelPaddy - Home</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no,
-            width=device-width, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="title" content="HostelPaddy - Home">
-    <meta name="author" content="@Eunit">
-    <meta name="description" content=" ">
-    <meta name="keywords" content=" ">
-    <meta http-equiv="Content-Type" content="text/html">
-    <meta name="theme-color" content="#0f4392">
-    <link rel="manifest" href="../manifest.json">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#0f4392">
-    <link rel="apple-touch-icon" href="img/logo.png">
-    <meta name="msapplication-TileColor" content="#0f4392">
-    <meta name="msapplication-TileImage" content="img/logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@hostelpaddy">
-    <meta name="twitter:creator" content="@eunit99">
-    <meta name="twitter:title" content=" ">
-    <meta name="twitter:description" content=" ">
-    <meta name="twitter:image" content="img/logo.png">
-    <meta name="apple-mobile-web-app-title" content="Add to Home">
+    @include('layouts.main.navigation')
 
-    <!-- Open Graph data -->
-    <meta property="og:title" content="HostelPaddy - Home">
-    <meta property="og:url" content="https://hostelpaddy.com">
-    <meta property="og:description" content=" ">
-    <meta property="og:site_name" content=" ">
-    <meta property="og:image" content="img/logo.png">
-    <meta name="og:locale" content="en_UK">
-    <meta name="fb:admins" content="">
-    <meta name="og:type" content="website">
-    <meta property="article:publisher" content="https://facebook.com/hostelpaddy1">
-    <meta property="og:image:secure_url" content="img/logo.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" href="img/logo.png">
-    <link rel="apple-touch-icon" href="img/logo.png">
-    <link rel="mask-icon" href="img/logo.png" color="#0f4392">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-
-    <!-- Site Verifications -->
-    <meta name="google-site-verification" content="" />
-    <meta name="google-analytics" content="UA-XXXXXX-X">
-
-    <!-- Vendor scripts -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <!-- Default Stylesheet -->
-    <link type="text/css" href="css/home.css" rel="stylesheet" />
-    <link type="text/css" href="css/styles.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <section id="header" class="header">
-      <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container d-flex justify-content-between">
-          <button class="navbar-toggler toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon">
-              <i class="fa fa-bars"></i>
-            </span>
-          </button>
-
-          <div class="navbar-brand">
-            <a class="" href="/">
-              <img alt="HostelPaddy logo" src="home-img/logo.png" />
-            </a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav justify-content-center">
-              <li class="nav-item active">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="hostels.html">Listed hostels</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home owners/agents</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="help.html">Help</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://blog.hostelpaddy.com">Blogs</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-primary signup" href="/auth-pages/onboarding.html">Sign Up</a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </nav>
-    </section>
     <!--Introduction Section-->
     <div class="container-fluid padding">
       <div class="row intro padding">
@@ -128,7 +16,7 @@
           <a href="/auth-pages/onboarding.html" class="btn btn-primary btn-lg">Get Started</a>
         </div>
         <div class="col-lg-6">
-          <img src="home-img/screenshot.png" class="img-fluid intro-img" alt="" />
+          <img src="{{ asset('main/home-img/screenshot.png') }}" class="img-fluid intro-img" alt="" />
         </div>
       </div>
     </div>
@@ -155,7 +43,7 @@
       <div class="container padding">
         <div class="row  students padding">
           <div class="col-lg-6">
-            <img src="home-img/Rectangle 32.png" class="img-fluid" />
+            <img src="{{ asset('main/home-img/Rectangle 32.png') }}" class="img-fluid" />
           </div>
           <div class="col-md-12 col-lg-6">
             <h1>For Students</h1><br>
@@ -198,7 +86,7 @@
             </p>
           </div>
           <div class="col-lg-6">
-            <img src="home-img/Rectangle 32 (1).png" class="img-fluid" />
+            <img src="{{ asset('main/home-img/Rectangle 32 (1).png') }}" class="img-fluid" />
           </div>
         </div>
       </div>
@@ -210,14 +98,14 @@
           <h2>Exclusive Features</h2><br><br>
         </div>
         <div class="col-md-12 col-lg-6">
-          <img src="home-img/Vector.png" alt=""><br><br>
+          <img src="{{ asset('main/home-img/Vector.png') }}" alt=""><br><br>
           <h1>Keep track of your dream hostel apartment</h1>
           <p>With your notification on, you will be the first to know when your desired
             hostel accommodation is listed.
           </p>
         </div>
         <div class="col-md-12 col-lg-6">
-          <img src="home-img/Vector2.png" alt=""><br><br>
+          <img src="{{ asset('main/home-img/Vector2.png') }}" alt=""><br><br>
           <h1>Request for a hostel mate</h1>
           <p>As a student, you can request for a hostel mate to split your rent and relieve your financial burden.
           </p>
@@ -254,53 +142,6 @@
       </div>
     </div>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <img src="home-img/footer_logo.png" class="mb-3">
-            <p class="footer-txt mb-3">Our goal is to make to make hostel accommodation accessible to all students
-              across the
-              country.</p>
-            <div class="col-12 social padding">
-              <a title="Hostel Paddy on Instagram" class="social-link" href="https://instagram.com/hostelpaddy">
-                <i class="fab fa-instagram footer-icon"></i>
-              </a>
-              <a title="Hostel Paddy on Twitter" class="social-link" href="https://twitter.com/hostelpaddy">
-                <i class="fab fa-twitter footer-icon"></i>
-              </a>
-              <a title="Hostel Paddy on Facebook" class="social-link" href="https://facebook.com/hostelpaddy1">
-                <i class="fab fa-facebook footer-icon"></i>
-              </a>
-            </div>
-            <p>&copy; 2021 Team Chernobyl</p>
-          </div>
-          <div class="col-md-4">
-            <h5>Products</h5>
-            <p><a href="about.html">About Us</a></p>
-            <p><a href="/auth-pages/onboarding.html">Sign up</a></p>
-            <p><a href="/auth-pages/onboarding.html">Login</a></p>
-            <p><a href="https://blog.hostelpaddy.com">Blog</a></p>
-            <p><a href="hostels.html">Listed hostels</a></p>
-            <p><a href="#">House owners/agents</a></p>
-          </div>
-          <div class="col-md-4">
-            <h5>Support</h5>
-            <p><a href="contact.html">Contact Us</a></p>
-            <p><a href="faqs.html">FAQs</a></p>
-            <p><a href="tos.html">Terms of services</a></p>
-            <p><a href="privacy.html">Privacy policy</a></p>
-            <!-- </div> -->
-          </div>
-        </div>
-    </footer>
+    @include('layouts.main.footer')
 
-    <!-- Vendor scripts -->
-    <script src="vendor/jquery/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-
-  </body>
-
-</html>
+@endsection
