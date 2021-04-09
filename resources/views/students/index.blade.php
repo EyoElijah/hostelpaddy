@@ -6,7 +6,7 @@
     <body>
 
         <h1>Hello User</h1>
-
+        <a href="{{ route('search') }}">Search for your preferred hostel</a>
         <form method="POST" action="{{ route('student.logout') }}">
             @csrf
             <a href="{{ route('student.logout') }}"
